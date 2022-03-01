@@ -8,7 +8,7 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.76/bin/apache-tomcat-8.5.
 RUN unzip apache-tomcat-8.5.76.zip
 COPY tomcat-users.xml /apache-tomcat-8.5.76/conf/
 COPY context.xml /apache-tomcat-8.5.76/webapps/manager/META-INF/
-COPY /var/lib/jenkins/workspace/Mav_01/gameoflife-web/target/gameoflife.war /apache-tomcat-8.5.76/webapps/
+COPY gameoflife.war /apache-tomcat-8.5.76/webapps/
 
 RUN chmod 777 /apache-tomcat-8.5.76/bin/startup.sh
 RUN chmod 777 /apache-tomcat-8.5.76/bin/shutdown.sh
