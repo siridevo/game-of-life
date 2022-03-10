@@ -1,5 +1,5 @@
 ---
- - hosts: Docker
+ - hosts: all
    become: true
    tasks:
      - name: executing docker file
