@@ -1,0 +1,11 @@
+---
+ - hosts: Docker
+   become: true
+   tasks:
+     - name: executing docker file
+       shell:
+         cmd: docker build -t tomcat .
+
+     - name: running image file
+       shell:
+         cmd: docker run -d -p 8083:8080 --net=bridge tomcat
