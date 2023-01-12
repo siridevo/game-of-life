@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   become: true
+   tasks:
+     - name: copying war file
+       copy:
+         src: /home/ubuntu/bamboo/bamboo-home/local-working-dir/1015810/GAM-GAM-JOB1/gameoflife-web/target/gameoflife.war
+         dest: /root/artifact
+         mode: 755
